@@ -1,0 +1,356 @@
+:root{
+    --color-main-fonts:#ffffff;
+    --color-nav-transition: #ca470a;
+    --color-border-index-buton: #ffffff;
+    --color-button-hover: #ca470a;
+    --color-background-menu-mobile: #ca470a;
+
+    --color-font-p-curiosities:#777;
+    --color-background-card-curiosities:#f1f3ff;
+    /* --color-background-card-curiosities:#fff3f3; */
+
+    --color-background-card-ShihtzuColors: rgba(23, 6, 122, 0.7);
+}
+
+* {
+    border: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header of the WebSite */
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../images/banner1R.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 120px;
+}
+
+.nav_links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav_links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav_links ul li a{
+    color: var(--color-main-fonts);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav_links ul li::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: var(--color-nav-transition);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav_links ul li:hover::after{
+    width: 100%;
+}
+
+.text_box{
+    width: 90%;
+    color: var(--color-main-fonts);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text_box h1{
+    font-size: 61px;
+}
+
+.text_box h2{
+    font-size: 25px;
+}
+
+.text_box p{
+    margin: 10px 0 40px;
+    font-size: 13px;
+    color: var(--color-main-fonts);
+    font-style: italic;
+}
+
+.hero_btn{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-main-fonts);
+    border: 2px solid var(--color-border-index-buton);
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero_btn:hover{
+    border: 2px solid var(--color-button-hover);
+    transition: 0.5s;
+}
+
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text_box h1{
+        font-size: 20px;
+    }
+
+    .text_box h2{
+        font-size: 13px;
+    }
+
+    .text_box p{
+        font-size: 9px;
+    }
+
+    .nav_links ul li{
+        display: block;
+    }
+
+    .nav_links{
+        position: absolute;
+        background: var(--color-background-menu-mobile);
+        height: 100vh;
+        width: -200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.75s;
+    }
+
+    nav .fa{
+        display: block;
+        color: var(--color-border-index-buton);
+        margin: 10px;
+        font: 22px;
+        cursor: pointer;
+    }
+
+    .nav_links ul{
+        padding: 30px;
+    }
+}
+
+/* Curiosities about Shih Tzu */
+.curiosities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+p{
+    color: var(--color-font-p-curiosities);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dog_col{
+    flex-basis:31%;
+    background: var(--color-background-card-curiosities);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.dog_col a{
+    color: var(--color-font-p-curiosities);
+}
+
+h3{
+    text-align: center;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.dog_col:hover{
+    box-shadow: 0 0 25px 0px rgba(0,0,0,0.2);
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/* <!-- Color Variations --> */
+.shihtzu_colors{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.dog_color_col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dog_color_col img{
+    width: 100%;
+    display: block;
+}
+
+.ply{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+
+.ply:hover{
+    background: var(--color-background-card-ShihtzuColors);
+}
+
+.ply h3{
+    width: 100%;
+    font-weight: 500;
+    color: var(--color-main-fonts);
+    font-size: 19px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.ply:hover h3{
+    bottom: 50%;
+    opacity: 1;
+}
+
+/* <!-- Shih Tzu Characteristics --> */
+.characteristics{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.characteristics sub{
+    font-style: italic;
+    color: var(--color-font-p-curiosities);
+}
+
+.characteristics sub a{
+    color: var(--color-font-p-curiosities);
+}
+
+.characteristics_col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.characteristics_col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.characteristics_col p{
+    padding: 0;
+}
+
+.characteristics_col h3{
+    margin-top: 16px;
+}
+
+/* <!-- Action --> */
+.action{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/images/banner2R.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.action h1{
+    color: var(--color-main-fonts);
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media(max-width:700px){
+    .action h1{
+        font-size: 23px;
+    }
+}
+
+/* <!-- Footer --> */
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer a{
+    color: var(--color-font-p-curiosities);
+}
+
+.footer h3{
+    color: var(--color-font-p-curiosities);
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.footer h4{
+    color: var(--color-font-p-curiosities);
+    font-size: 13px;
+    font-weight: 300;
+}
+
+
