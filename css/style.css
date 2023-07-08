@@ -1,3 +1,5 @@
+/* <!-- Assignment 1 - This page "template.html" was developed in 2023-07-07
+    by the studen Ronaldo Ferreira Studen ID: 4524286 --> */
 :root{
     --color-main-fonts:#ffffff;
     --color-nav-transition: #ca470a;
@@ -7,7 +9,6 @@
 
     --color-font-p-curiosities:#777;
     --color-background-card-curiosities:#f1f3ff;
-    /* --color-background-card-curiosities:#fff3f3; */
 
     --color-background-card-ShihtzuColors: rgba(23, 6, 122, 0.7);
 }
@@ -117,6 +118,7 @@ nav .fa{
     display: none;
 }
 
+/* Header of the WebSite - responsive adjusts*/
 @media(max-width: 700px){
     .text_box h1{
         font-size: 20px;
@@ -210,6 +212,7 @@ h3{
     box-shadow: 0 0 25px 0px rgba(0,0,0,0.2);
 }
 
+/* Curiosities about Shih Tzu - responsive adjusts*/
 @media(max-width: 700px){
     .row{
         flex-direction: column;
@@ -324,6 +327,7 @@ h3{
     padding: 0;
 }
 
+/* <!-- Action - responsive adjusts --> */
 @media(max-width:700px){
     .action h1{
         font-size: 23px;
@@ -335,6 +339,7 @@ h3{
     width: 100%;
     text-align: center;
     padding: 30px 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer a{
@@ -344,7 +349,7 @@ h3{
 .footer h3{
     color: var(--color-font-p-curiosities);
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .footer h4{
